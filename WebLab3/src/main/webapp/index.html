@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <script src="js/ajax.js"></script>
+        <link rel="stylesheet" href="./css/main.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>Kalkulator jednostek</h1>
+        <div class="column">
+            <div class="row">
+                <input type="number" id='inputtocalculate'/>
+                <select id="selectunits">
+                </select>
+                <button class="button" onClick="getResult('inputtocalculate','selectunits','result');getCookies('lastGoodResult')">Przelicz</button>
+                <div>  Wynik = </div>
+                <div id="result"></div>
+            </div>
+            <div class="row">Ostatnie poprawnie wykonane przeliczenie: <div id="lastGoodResult"></div></div>
+            <a href="/WebLab3/addUnit.html"> <button class="button">Dodaj przelicznik</button></a>
+            <button class="button">Historia</button>
+            <table border="2" cellpadding="12">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>Jednostka wej</th>
+                        <th>Jednostka wyj</th>
+                        <th>Formuła</th>
+                    </tr>
+                </thead>
+                <tbody id="unitstable"></tbody>
+            </table>
+        </div>
+        <script>
+            getUnits("unitstable", "table");
+            getUnits("selectunits", "select");
+            getCookies("lastGoodResult");
+        </script>
+    </body>
+</html>

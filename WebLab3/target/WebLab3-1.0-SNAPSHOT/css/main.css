@@ -1,0 +1,25 @@
+body {
+    background-color: lightgreen;
+}
+
+table, td, th, tr {
+    border-collapse: collapse;
+    border: 1px black solid;
+    padding: 5px;
+}
+
+.button {
+    width: 150px;
+}
+
+.column {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;   
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
